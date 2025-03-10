@@ -1,0 +1,709 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "DM Sans", sans-serif;
+}
+
+body {
+    
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5; 
+    overflow-x: hidden;
+}
+
+
+
+
+
+/* S HEADER(navbar) */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 30px;
+    background: linear-gradient(135deg, #000000, #252525);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 28px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.logo-icon {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    object-fit: contain;
+    border-radius: 20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-grow: 1;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: #ffffff;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 30px;
+    transition: all 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #d9d7d7;
+    transform: scale(1.05);
+}
+
+.navbar a:first-child {
+    margin-left: 0;
+}
+
+.btn-menu {
+    display: inline-block;
+    background-color: #000000;
+    color: white;
+    padding: 7px 19px;
+    font-size: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 15px;
+    margin-top: 4px;
+    transition: background-color 0.9s ease, transform 0.7s ease;
+}
+
+.btn-menu:hover {
+    background-color: #2980b9;
+    transform: translateY(2px);
+}
+
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.hamburger-menu .bar {
+    width: 25px;
+    height: 4px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.navbar.active a {
+    animation: fadeInLeft 0.5s ease-in-out both;
+}
+
+.navbar.active a:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.navbar.active a:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.navbar.active a:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.navbar.active a:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+@media (max-width: 834px) {
+    .navbar {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #252525;
+        text-align: center;
+        padding: 10px 0;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        height: auto;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        z-index: 50;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .navbar a {
+        font-size: 18px;
+        margin: 10px 0;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+}
+
+
+
+@media (min-width: 320px) and (max-width: 376px) {
+
+    .navbar {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #252525;
+        text-align: center;
+        padding: 10px 0;
+        position: absolute;
+        top: 60px; 
+        left: 0;
+        right: 0;
+        height: auto; 
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        z-index: 50;
+    }
+    .logo {
+        display: flex;
+        align-items: center;
+        font-size: 20px;
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: 700;
+    }
+    .navbar.active {
+        display: flex;
+    }
+
+    .navbar a {
+        font-size: 16px;
+        margin: 12px 0;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+}
+
+@media (min-width: 767px) and (max-width: 834px) {
+
+    .navbar {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #252525;
+        text-align: center;
+        padding: 10px 0;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        height: auto; 
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        z-index: 50;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .navbar a {
+        font-size: 20px;
+        margin: 10px 0;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+}
+
+@media (min-width: 390px) and (max-width: 428px) {
+
+    .navbar {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #252525;
+        text-align: center;
+        padding: 10px 0;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        height: auto;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        z-index: 50;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .navbar a {
+        font-size: 18px;
+        margin: 12px 0;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+}
+
+
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+/* F HEADER(navbar) */
+
+
+
+
+
+/* S À PROPOS DE HERAULTPHONE */
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.about-section {
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 60px;
+}
+
+.about-container {
+    display: flex;
+    background:#ececec;
+    border-radius: 30px;
+    align-items: center;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-text {
+    flex: 1;
+    padding: 30px;
+    animation: fadeInLeft 1.2s ease-in-out both;
+}
+
+.about-title {
+    font-size: 42px;
+    font-weight: 700;
+    color: #1f1f1f;
+    margin-bottom: 40px;
+    border-left: 5px solid #000000;
+    padding-left: 15px;
+}
+
+.highlight {
+    color: #767774;
+    font-weight: bold;
+    
+}
+
+.about-description {
+    font-size: 18px;
+    line-height: 1.8;
+    
+    color: #4a4a4a;
+    max-width: 800px;
+    margin-top: 50px;
+}
+
+.about-image {
+    flex: 1;
+    text-align: center;
+}
+
+.about-img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 15px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease-in-out;
+}
+
+.about-img:hover {
+    transform: scale(1.03);
+}
+
+.about-list-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 40px;
+    padding: 0 20px;
+}
+
+.about-list {
+    text-align: left;
+    max-width: 800px;
+    list-style: none;
+    padding: 0;
+    font-size: 18px;
+    color: #000000;
+}
+
+.about-list li {
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+}
+
+.about-list li i {
+    color: #6b6b6b;
+    
+    font-size: 24px;
+    margin-right: 15px;
+}
+
+
+.about-button {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 30px;
+    background-color: #3498db; 
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 15px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeInLeft 1.8s ease-in-out both;
+}
+
+.about-button:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+
+@media screen and (max-width: 1024px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .about-text {
+        padding: 0 20px;
+    }
+
+    .about-title {
+        font-size: 36px;
+        padding-left: 0;
+        border-left: none;
+    }
+
+    .about-list {
+        text-align: center;
+        padding: 0;
+    }
+
+    .about-list li {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .about-list li i {
+        font-size: 24px;
+        margin-bottom: 8px;
+    }
+
+    .about-button {
+        font-size: 16px;
+        padding: 12px 28px;
+    }
+
+    .about-image {
+        order: -1;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .about-section {
+        padding: 50px 15px;
+    }
+
+    .about-title {
+        font-size: 30px;
+    }
+
+    .about-description {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
+    .about-list {
+        font-size: 16px;
+    }
+
+    .about-list li {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .about-list li i {
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+
+    .about-list li strong {
+        display: block;
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+
+    .about-button {
+        font-size: 15px;
+        padding: 10px 25px;
+    }
+
+    .about-img {
+        border-radius: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .about-title {
+        font-size: 36px;
+    }
+
+    .about-description {
+        font-size: 16px;
+    }
+
+    .about-list {
+        font-size: 14px;
+    }
+
+    .about-list li {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .about-list li i {
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+
+    .about-list li strong {
+        display: block;
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+
+    .about-button {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .about-section {
+        padding: 40px 15px;
+    }
+
+    .about-title {
+        font-size: 28px;
+    }
+
+    .about-description {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    .about-list {
+        font-size: 14px;
+    }
+
+    .about-list li {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .about-list li i {
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+
+    .about-list li strong {
+        display: block;
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    .about-button {
+        font-size: 12px;
+        padding: 8px 18px;
+    }
+
+    .about-img {
+        width: 90%;
+        max-width: 400px;
+        border-radius: 8px;
+    }
+}
+
+/* F À PROPOS DE HERAULTPHONE */
+
+
+
+
+
+
+
+
+/* S FOOTER */
+.right-content .social-links {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 18px;
+    transition: 0.3s ease;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    background: #fff;
+    color: #111;
+}
+
+.social-icon img {
+    width: 30px;
+    height: 30px;
+}
+
+.footer .social-image {
+    width: 210px;
+    height: auto;
+    margin-bottom: 40px;
+}
+
+.footer {
+    width: 100%;
+    padding: 40px 20px;
+    background: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1200px;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 20px;
+    margin: 25px 25px 25px;
+}
+
+.footer-title {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.footer-column p {
+    font-size: 16px;
+    line-height: 1.5;
+    opacity: 0.8;
+    margin-bottom: 10px;
+}
+
+.footer-bottom {
+    width: 100%;
+    max-width: 1200px;
+    text-align: center;
+    font-size: 14px;
+    opacity: 0.8;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 20px;
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    margin: 5px 0;
+}
+
+.footer-bottom a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.footer-bottom a:hover {
+    color: #393939;
+}
+
+
+
+
+
+
+/* F FOOTER */
+
+/* FIN DE LA PAGE  */

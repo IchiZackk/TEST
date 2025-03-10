@@ -1,0 +1,1558 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "DM Sans", sans-serif;
+}
+
+body {
+    
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5; 
+    overflow-x: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* S HEADER(navbar) */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 30px;
+    background: linear-gradient(135deg, #000000, #252525);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 28px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.logo-icon {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    object-fit: contain;
+    border-radius: 20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-grow: 1;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: #ffffff;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 30px;
+    transition: all 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #d9d7d7;
+    transform: scale(1.05);
+}
+
+.navbar a:first-child {
+    margin-left: 0;
+}
+
+.btn-menu {
+    display: inline-block;
+    background-color: #000000;
+    color: white;
+    padding: 7px 19px;
+    font-size: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 15px;
+    margin-top: 4px;
+    transition: background-color 0.9s ease, transform 0.7s ease;
+}
+
+.btn-menu:hover {
+    background-color: #2980b9;
+    transform: translateY(2px);
+}
+
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.hamburger-menu .bar {
+    width: 25px;
+    height: 4px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.navbar.active a {
+    animation: fadeInLeft 0.5s ease-in-out both;
+}
+
+.navbar.active a:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.navbar.active a:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.navbar.active a:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.navbar.active a:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+
+/* F HEADER(navbar) */
+
+
+
+
+
+
+
+
+/* S MARQUES  */
+.brands-section {
+    opacity: 0; 
+    transform: translateX(-50px); 
+    transition: opacity 1s ease, transform 1s ease; 
+    text-align: center;
+    padding: 50px 20px;
+    margin-top: 100px;
+    margin-bottom: 0px;
+    background-color: #ececec;
+}
+
+
+.brands-section.visible {
+    opacity: 1; 
+    transform: translateX(0); 
+    animation: fadeInLeft 1s ease-out forwards; 
+}
+
+
+.brands-header {
+    max-width: 600px;
+    margin: 0 auto 30px;
+}
+
+.brands-header h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+.brands-header p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 65px;
+}
+
+.brands-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.brand-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    width: 140px;
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    opacity: 0; 
+    transform: translateX(-50px); 
+    transition: opacity 1s ease, transform 1s ease; 
+}
+
+
+.brand-card.visible {
+    opacity: 1;
+    transform: translateX(0); 
+    animation: fadeInLeft 1s ease-out forwards; 
+}
+
+.brand-card:hover {
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+}
+
+.brand-card img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.brand-card p {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+    margin-top: 8px;
+    line-height: 1.2;
+}
+/* F MARQUES  */
+
+
+
+.ourgalerie {
+    max-width: 600px;
+    margin: 200px auto 30px;
+}
+
+.ourgalerie h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 18px;
+    text-align: center;
+}
+
+.ourgalerie p {
+    font-size: 16px;
+    text-align: center;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: -25px;
+}
+
+@media (max-width: 768px) {
+    .ourgalerie {
+        max-width: 90%;
+        margin-top: 150px;
+    }
+
+    .ourgalerie h2 {
+        font-size: 24px;
+    }
+
+    .ourgalerie p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .ourgalerie {
+        margin-top: 120px;
+    }
+
+    .ourgalerie h2 {
+        font-size: 1.8rem;
+    }
+
+    .ourgalerie p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 394px) {
+    .ourgalerie {
+        margin-top: 100px;
+    }
+
+    .ourgalerie h2 {
+        font-size: 1.8rem;
+    }
+
+    .ourgalerie p {
+        font-size: 1rem;
+    }
+}
+
+
+
+
+/* S GALERIE */
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    overflow: hidden;
+}
+
+.carrousel {
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    width: 100%; 
+    padding: 0;
+    margin: 0;
+}
+
+.carrousel::-webkit-scrollbar {
+    display: none;
+}
+
+.card {
+    scroll-snap-align: start;
+    border-radius: 15px;
+    min-height: 450px;
+    min-width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    background: black;
+    flex-shrink: 0; 
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+.nav-controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 13px;
+    width: 100%;
+}
+
+.nav-btn {
+    background-color: rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    padding: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+}
+
+.nav-btn:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+/* F GALERIE */
+
+
+
+
+
+
+
+
+
+
+
+ /* S Processus de Réparation */
+
+
+
+.repair-process-title,
+.repair-process-subtitle,
+.repair-step {
+    opacity: 0; 
+    transform: translateX(-50px); 
+    transition: opacity 1s ease, transform 1s ease; 
+}
+
+
+.repair-process-title.visible,
+.repair-process-subtitle.visible,
+.repair-step.visible {
+    opacity: 1; 
+    transform: translateX(0);
+    animation: fadeInLeft 1s ease-out forwards;
+}
+
+
+.repair-process-title {
+    text-align: center;
+    color: #333;
+    font-size: 28px;
+    font-weight: 700;
+    margin-top: 150px;
+}
+
+.repair-process-subtitle {
+    text-align: center;
+    color: #666;
+    font-size: 16px;
+    margin-top: 16px;
+    margin-bottom: 20px;
+}
+
+.repair-process-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: stretch;  
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    margin-top: 50px;
+    margin-bottom: 150px;
+}
+
+.repair-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 230px;
+    padding: 15px 0;
+}
+
+.repair-icon {
+    width: 55px;
+    height: 55px;
+    margin-bottom: 15px;
+}
+
+.repair-step-title {
+    font-size: 19px;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 10px;  
+}
+
+.repair-step-description {
+    font-size: 15px;
+    font-weight: 300;  
+    color: #444;
+    margin-top: 10px; 
+    line-height: 1.6;  
+}
+/* F Processus de Réparation */
+
+
+
+
+/* S accessoire section */
+.accessories-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    margin-bottom: 20px;
+    overflow: hidden;
+    padding: 20px;
+    background-color: #ececec;
+}
+
+.content-wrapper {
+    display: flex;
+    align-items: center;
+    padding: 50px;
+    max-width: 1200px;
+    gap: 40px;
+}
+
+.rounded-image {
+    width: 600px;
+    height: auto;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+    object-fit: cover;
+}
+
+.text-box {
+    max-width: 600px;
+}
+
+.text-box h2 {
+    font-size: 32px;
+    color: #252525;
+    margin-bottom: 15px;
+}
+
+.text-box p {
+    font-size: 18px;
+    color: #444;
+}
+
+@media (max-width: 1024px) {
+    .content-wrapper {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
+        gap: 20px;
+    }
+
+    .rounded-image {
+        width: 100%;
+        max-width: 500px;
+        border-radius: 20px;
+    }
+
+    .text-box {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .accessories-section {
+        height: auto;
+    }
+
+    .content-wrapper {
+        padding: 20px;
+    }
+
+    .rounded-image {
+        max-width: 400px;
+    }
+
+    .text-box h2 {
+        font-size: 28px;
+    }
+
+    .text-box p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .rounded-image {
+        max-width: 100%;
+    }
+
+    .text-box h2 {
+        font-size: 24px;
+    }
+
+    .text-box p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 394px) {
+    .content-wrapper {
+        padding: 15px;
+    }
+
+    .text-box h2 {
+        font-size: 22px;
+    }
+
+    .text-box p {
+        font-size: 13px;
+    }
+}
+
+/* F accessoire section */
+
+
+
+
+
+/* S 6 RECTANGLES SECTION  */
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.repair-services {
+    padding: 60px 20px;
+    margin-bottom: 95px;
+}
+
+.services-header {
+    text-align: center;
+    margin-bottom: 90px;
+    animation: fadeInLeft 0.8s ease-out both;
+}
+
+.services-header h2 {
+    font-size: 28px;
+    color: #333;
+    margin-top: 80px;
+}
+
+.services-header p {
+    font-size: 16px;
+    color: #555;
+    margin-top: 20px;
+}
+
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    animation: fadeInLeft 1s ease-out both;
+}
+
+.service-item {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    width: 30%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.service-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
+}
+
+.service-icon img {
+    width: 100%;
+    height: auto;
+    transition: all 0.3s ease;
+}
+
+.service-item:hover .service-icon img {
+    transform: scale(1.1);
+}
+
+h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1rem;
+    color: #555;
+}
+
+@media (max-width: 1024px) {
+    .services-container {
+        justify-content: center;
+    }
+
+    .service-item {
+        width: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    .services-header {
+        margin-bottom: 60px;
+    }
+
+    .services-header h2 {
+        font-size: 24px;
+    }
+
+    .services-header p {
+        font-size: 14px;
+    }
+
+    .service-item {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .repair-services {
+        padding: 40px 15px;
+    }
+
+    .services-header h2 {
+        font-size: 22px;
+    }
+
+    .services-header p {
+        font-size: 16px;
+    }
+
+    .service-item {
+        padding: 15px;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 394px) {
+    .services-header {
+        margin-bottom: 40px;
+    }
+
+    .services-header h2 {
+        font-size: 20px;
+    }
+
+    .services-header p {
+        font-size: 16px;
+    }
+
+    .service-item {
+        padding: 12px;
+    }
+
+    h3 {
+        font-size: 0.9rem;
+    }
+
+    p {
+        font-size: 0.85rem;
+    }
+}
+
+/* F 6 RECTANGLES SECTION */
+
+
+
+ 
+
+
+/* S FOOTER */
+.footer {
+    width: 100%;
+    padding: 40px 20px;
+    background: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1200px;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 250px;
+    margin: 25px;
+}
+
+.footer-title {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.footer-column p {
+    font-size: 16px;
+    line-height: 1.5;
+    opacity: 0.8;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.footer-bottom {
+    width: 100%;
+    max-width: 1200px;
+    text-align: center;
+    font-size: 14px;
+    opacity: 0.8;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 20px;
+    margin-top: 20px;
+    color: white;
+}
+
+.footer-bottom p {
+    margin: 5px 0;
+}
+
+.footer-bottom a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.footer-bottom a:hover {
+    color: #393939;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 18px;
+    transition: 0.3s ease;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    background: #fff;
+    color: #111;
+}
+
+.social-icon img {
+    width: 30px;
+    height: 30px;
+}
+
+.footer .social-image {
+    width: 210px;
+    height: auto;
+    margin-bottom: 40px;
+}
+
+.right-content .social-links {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-column p {
+    font-size: 16px;
+    line-height: 1.5;
+    opacity: 0.8;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.footer-bottom {
+    width: 100%;
+    max-width: 1200px;
+    text-align: center;
+    font-size: 14px;
+    opacity: 0.8;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 20px;
+    margin-top: 20px;
+    color: white;
+}
+
+.footer-bottom p {
+    margin: 5px 0;
+}
+
+.footer-bottom a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.footer-bottom a:hover {
+    color: #393939;
+}
+/* FIN DE LA PAGE  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* START MEDIA QUERY PAGES */
+/* S HEADER NAVBAR */
+@media (max-width: 834px) {
+    .navbar {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #252525;
+        text-align: center;
+        padding: 10px 0;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        height: auto;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        z-index: 50;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .navbar a {
+        font-size: 18px;
+        margin: 10px 0;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 376px) {
+
+    .navbar {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #252525;
+        text-align: center;
+        padding: 10px 0;
+        position: absolute;
+        top: 60px; 
+        left: 0;
+        right: 0;
+        height: auto; 
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        z-index: 50;
+    }
+    .logo {
+        display: flex;
+        align-items: center;
+        font-size: 20px;
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: 700;
+    }
+    .navbar.active {
+        display: flex;
+    }
+
+    .navbar a {
+        font-size: 16px;
+        margin: 12px 0;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+}
+
+@media (min-width: 767px) and (max-width: 834px) {
+
+    .navbar {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #252525;
+        text-align: center;
+        padding: 10px 0;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        height: auto; 
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        z-index: 50;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .navbar a {
+        font-size: 20px;
+        margin: 10px 0;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+}
+
+@media (min-width: 390px) and (max-width: 428px) {
+
+    .navbar {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #252525;
+        text-align: center;
+        padding: 10px 0;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        height: auto;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        z-index: 50;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .navbar a {
+        font-size: 18px;
+        margin: 12px 0;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+}
+/* F HEADER NAVBAR */
+
+
+
+
+
+
+
+
+/* S MARQUES  */
+@media (max-width: 768px) {
+    .brands-section {
+        padding: 40px 15px;
+    }
+
+    .brands-header h2 {
+        font-size: 1.8rem;
+    }
+
+    .brands-header p {
+        font-size: 1rem;
+    }
+
+    .brands-container {
+        gap: 3px;
+    }
+
+    .brand-card {
+        width: 120px;
+        height: 120px;
+    }
+
+    .brand-card img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .brand-card p {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .brands-section {
+        padding: 30px 10px;
+    }
+
+    .brands-header h2 {
+        font-size: 26px;
+    }
+
+    .brands-header p {
+        font-size: 16px;
+    }
+
+    .brands-container {
+        gap: 2px;
+    }
+
+    .brand-card {
+        width: 100px;
+        height: 100px;
+    }
+
+    .brand-card img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .brand-card p {
+        font-size: 11px;
+    }
+}
+/* F MARQUES  */
+
+
+
+
+
+
+/* S GALERIE */
+@media (max-width: 768px) {
+    .nav-btn {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        min-width: 100%; 
+        min-height: 500px;
+    }
+
+    .nav-btn {
+        display: flex;
+    }
+    
+    .carrousel {
+        gap: 0.5rem;
+    }
+}
+
+@media (max-width: 394px) {
+    .card {
+        min-width: 100%; 
+        min-height: 400px;
+    }
+
+    
+    .carrousel {
+        gap: 0.5rem;
+    }
+}
+/* F GALERIE */
+
+
+/* S PROCESSUS REPARATION */
+@media (max-width: 1024px) {
+    .repair-process-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 15px;
+        margin-bottom: 50px;
+    }
+
+    .repair-step {
+        width: 90%;
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .repair-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .repair-step-title {
+        font-size: 21px;
+    }
+
+    .repair-step-description {
+        font-size: 17px;
+    }
+
+    .repair-process-title {
+        font-size: 26px;
+    }
+
+    .repair-process-subtitle {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .repair-process-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 15px;
+    }
+
+    .repair-step {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .repair-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .repair-step-title {
+        font-size: 21px;
+    }
+
+    .repair-step-description {
+        font-size: 19px;
+    }
+
+    .repair-process-title {
+        font-size: 25px;
+    }
+
+    .repair-process-subtitle {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 480px) {
+    .repair-process-container {
+        padding: 0 10px;
+    }
+
+    .repair-step {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .repair-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .repair-step-title {
+        font-size: 20px;
+    }
+
+    .repair-step-description {
+        font-size: 16px;
+    }
+
+    .repair-process-title {
+        font-size: 25px;
+    }
+
+    .repair-process-subtitle {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 375px) {
+    .repair-process-container {
+        padding: 0 10px;
+    }
+
+    .repair-step {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .repair-icon {
+        width: 45px;
+        height: 45px;
+    }
+
+    .repair-step-title {
+        font-size: 18px;
+    }
+
+    .repair-step-description {
+        font-size: 14px;
+    }
+
+    .repair-process-title {
+        font-size: 24px;
+    }
+
+    .repair-process-subtitle {
+        font-size: 14px;
+    }
+}
+/* F PROCESSUS REPARATION */
+
+
+
+
+
+
+
+
+
+
+
+
+/* S KEYFRAME SECTION */
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px); 
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); 
+    }
+}
+
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px); 
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0); 
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px); 
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+/* F KEYFRAME SECTION */
